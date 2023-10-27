@@ -78,7 +78,6 @@ class App extends Component {
   
   render() {
     const {
-      page,
       queryResult,
       totalHits,
       isLoading,
