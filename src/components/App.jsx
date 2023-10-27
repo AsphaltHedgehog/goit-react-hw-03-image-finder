@@ -83,7 +83,8 @@ class App extends Component {
       totalHits,
       isLoading,
       isModal,
-      modalImg} = this.state
+      modalImg,
+    } = this.state
     return (
       <div className={css.gallery}>
         {isModal && <Modal
@@ -105,8 +106,6 @@ class App extends Component {
         }
         {isLoading && <Spid />}
         {totalHits > queryResult.length > 0 && !isLoading && (<Button
-          page={page}
-          totalHits={queryResult.totalHits}
           onClick={this.onBtnHandler}
         />)
         }

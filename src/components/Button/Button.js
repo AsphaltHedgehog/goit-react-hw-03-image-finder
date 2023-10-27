@@ -7,9 +7,6 @@ import css from './Button.module.css'
 
 class Button extends Component {
   onBtnRender = () => {
-    if (this.props.totalHits / 12 < this.props.page) {
-      return ''
-    };
     return <button
       onClick={this.props.onClick}
       className={css.btn}
@@ -23,9 +20,8 @@ class Button extends Component {
   };
 };
 
-Button.propTypes = {
-  // onSubmit: PropTypes.func,
-}
-
+Button.propTypes = { 
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Button;

@@ -16,8 +16,11 @@ class ImageGallery extends Component {
 };
 
 ImageGallery.propTypes = {
-  // onSubmit: PropTypes.func,
-}
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ]).isRequired,
+};
 
 
 export default ImageGallery;
